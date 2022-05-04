@@ -8,4 +8,8 @@ src/network/Producer.cpp
 src/network/Producer.h 
 src/network/Consumer.cpp 
 src/network/Consumer.h
+src/files/Reader.cpp 
+src/files/Reader.h
+src/outputs/Outputer.cpp 
+src/outputs/Outputer.h
 )
