@@ -48,3 +48,6 @@
 4. Having `const` on the return value makes it `read-only` (`string const getValue()`). Having `const` in front of the function makes the return value need to be a `const` (`string getValue() const`).
 5. Is there a reason to have reference member variables?
 6. Template classes/functions cannot be separated in the `.h` and `.cpp` files. Unless you can declare all the types (`int`, `string`, etc) that the class/function could accept (that declaration happens somewhere at the bottom of the `.cpp` file). This is because a `templated` class/function is not an actual class/function. It just tells the compiler how the generated the class/function.
+7. Template function explicit instantiation in .cpp: `template vector<string> const Reader::readFile<string>();`
+8. Template class explicit instantiation in .cpp: `template class Reader<int>;`
+9. Interfaces are `Abstract Classes` with `Pure Virtual Functions`: `virtual void getValue() = 0`

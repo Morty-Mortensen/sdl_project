@@ -25,33 +25,7 @@ namespace files
         Reader(std::string fileName);
 
         template <typename T>
-        std::vector<T> const readFile()
-        {
-            std::ifstream is{this->fileName};
-            std::vector<T> vec;
-
-            if (!is)
-            {
-                std::cerr << "These was an error IS";
-                return vec;
-            }
-
-            std::string line;
-            while (is)
-            {
-                std::getline(is, line);
-                vec.push_back(line);
-
-                if (is.eof()) // Check for end of file so that the last line doesn't get added twice.
-                {
-                    break;
-                }
-            }
-
-            is.close();
-
-            return vec;
-        }
+        std::vector<T> const readFile(); // Read-only values from file.
 
         void writeFile(std::vector<std::string> const &vec);
 
